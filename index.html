@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment no 6</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="icon" href="./assets/images/hfhgfhgf.png" type="image/png">
+</head>
+<style>
+  * {
+    padding-top: 2px;
+
+    margin: 0%;
+    box-sizing: border-box;
+  }
+
+  .search-button {
+    padding: 4px;
+  }
+
+  .btn:hover {
+    width: 90px;
+    box-shadow: 0px 2px 14px 0px rgba(255, 174, 0, 0.4);
+    transform: scale(1.1);
+    background-color: none;
+    transition: 1s;
+  }
+
+  .btn-img {
+    padding-bottom: 3px;
+    padding-right: 3px;
+  }
+
+  .btn-text {
+    color: orange;
+  }
+
+  .img-hover :hover {
+    transform: scale(1.1);
+    background-color: none;
+    transition: 1s;
+  }
+
+  .search-food {
+    text-decoration: none;
+    color: black;
+  }
+
+  .img-back {
+    position: relative;
+  }
+
+
+  .card-head {
+    position: absolute;
+    top: 0;
+    margin-top: 140px;
+    font-size: 44px;
+    font-weight: bolder;
+    color: #FFFF;
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    margin-top: 210px;
+    color: #504F4F;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .parent {
+    background-color: #FFFF;
+    border-radius: 10px;
+    height: 150px;
+    width: 650px;
+
+    position: absolute;
+    top: 250px;
+    padding-left: 24px;
+    padding-top: 24px;
+
+  }
+
+  .card-button {
+    color: #F17228;
+
+
+  }
+
+  .btn-texxt {
+    color: #F17228;
+    padding-left: 4px;
+  }
+
+  .button-img {
+    padding-bottom: 4px;
+  }
+
+  .btn-texxxt {
+    color: #757575;
+    padding-left: 6px;
+  }
+
+  .button-imgg {
+    padding-bottom: 5px;
+  }
+
+  input {
+    width: 460px;
+    height: 44px;
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    position: absolute;
+    top: 340px;
+    margin-left: 24px;
+    margin-bottom: 15px;
+
+
+
+  }
+
+  .input-img {
+    padding-left: 30px;
+    position: absolute;
+    top: 347px;
+
+  }
+
+  ::placeholder {
+    padding-left: 34px;
+  }
+
+  .background-img-btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFF;
+    line-height: 18px;
+    margin-left: 3px;
+    margin-top: 3px;
+    position: absolute;
+    top: 336px;
+    left: 600px;
+    height: 49px;
+    border: none;
+    border-radius: 5px;
+    width: 129px;
+    background: linear-gradient(95.71deg, #FF7A7A -39.64%, #F75900 135.31%);
+    transition: 0.6s;
+
+  }
+
+  .background-img-btn:hover {
+    background-position: center;
+  }
+
+  .imgg {
+    margin-bottom: 4px;
+    margin-right: 3px;
+  }
+
+  .bcg {
+    position: absolute;
+    left: 770px;
+    top: 140px;
+  }
+
+  .discount-img {
+    position: relative;
+  }
+
+  .discount {
+    border: none;
+    color: #FFFF;
+    font-weight: 600;
+    font-size: 26px;
+    background-color: #FFB30E;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 680px;
+
+  }
+
+  .p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #424242;
+  }
+
+  .re {
+    border: none;
+    border-radius: 5px;
+    background-color: #FBDDCD;
+    color: #F17228;
+    font-size: 22px;
+    font-weight: 600;
+
+  }
+
+  .fi {
+    background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) -42.47%, rgba(253, 237, 202, 0) 100%);
+    margin-top: 60px;
+  }
+
+  .heading {
+    font-size: 43px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 60px;
+    color: #F17228;
+  }
+
+  .pp {
+    margin-left: 60px;
+    padding-left: 40px;
+
+  }
+
+  .ip {
+    padding: 50px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #424242;
+    font-family: sans-serif;
+  }
+
+  .p1 {
+    margin-left: 47px;
+    margin-top: 34px;
+  }
+
+  .p2 {
+    margin-left: 64px;
+  }
+
+  .p3 {
+    margin-left: 75px;
+  }
+
+  .p4 {
+    margin-left: 85px;
+    margin-top: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .para {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .i1 {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .i2 {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .receipt {
+    font-size: 18px;
+    font-weight: 600;
+    color: #424242;
+    line-height: 26.4px;
+  }
+</style>
+
+<body>
+
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-2">
+        <a href="#" class="img-hover"><img src="./assets/images/j.png" alt="logo" width="150px"></a>
+      </div>
+      <div class="col-6">
+        <span> <b>Deliver To:</b> <img src="./assets/images/Group.png" alt="image" width="10px"> </span>Current Location
+        <b>Mohammad pur Bus Stand, Dhaka</b>
+      </div>
+      <div class="col-4">
+        <span><img src="./assets/images/Search.png" alt="img"><b class="search-button"> <a href="#"
+              class="search-food">Search Food</a> </b></span>
+        <button type="button" class="btn btn-light"> <img src="./assets/images/user.png" alt="img" class="btn-img"><b
+            class="btn-text"> Light </b> </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-12">
+        <img src="./assets/images/Group 1 1.png" alt="" width="100%" class="img-back">
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <p class="card-head">Are You Starving?</p>
+        <p class="text">Within a few clicks, find meals that are accessible near you</p>
+        <div class="parent">
+          <span> <button
+              style="border: none; background-color: #fbddcc; width: 130px; height: 30px; border-radius: 5px;"><img
+                src="./assets/images/iIcon.png" alt="img" class="button-img"><b class="btn-texxt">Delivery</b></button>
+          </span>
+
+          <span> <button
+              style="border: none; background-color: #ffffff; width: 130px; height: 30px; border-radius: 5px;"><img
+                src="./assets/images/upIcon.png" alt="img" class="button-imgg"><b class="btn-texxxt">Pick
+                up</b></button>
+          </span>
+        </div>
+        <div class="parent--1">
+          <div class="input"><input type="text" placeholder=" Enter Your Address "> </div>
+          <img src="./assets/images/iiii.png" alt="" class="input-img">
+        </div>
+        <div class="input-btn"><button class="background-img-btn"><img src="./assets/images/skd.png" alt=""
+              class="imgg">Find Food</button></div>
+
+      </div>
+      <div class="col-4">
+        <img src="./assets/images/Image.png" alt="" width="500px" class="bcg">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <img src="./assets/images/jImage.png" alt="img" width="265px" height="190px"
+          style="border-radius: 10px; margin-top: 40px; " class="discount-img"><button class="discount">Discount 25%OFF
+        </button>
+      </div>
+      <div class="col-3">
+        <img src="./assets/images/Imagne.png" alt="img" width="265px" height="190px"
+          style="border-radius: 10px; margin-top: 40px; " class="discount-img"><button class="discount">Discount 15%OFF
+        </button>
+      </div>
+      <div class="col-3">
+        <img src="./assets/images/Imaige.png" alt="img" width="265px" height="190px"
+          style="border-radius: 10px; margin-top: 40px; " class="discount-img"><button class="discount">Discount 25%OFF
+        </button>
+      </div>
+      <div class="col-3">
+        <img src="./assets/images/Imagfe.png" alt="img" width="265px" height="190px"
+          style="border-radius: 10px; margin-top: 40px; " class="discount-img"><button class="discount">Discount 10%OFF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <p class="p">Greys Vage</p>
+        <button class="re">6 Day's Remaining</button>
+      </div>
+      <div class="col-3">
+        <p class="p">Greys Vage</p>
+        <button class="re">6 Day's Remaining</button>
+      </div>
+      <div class="col-3">
+        <p class="p">Greys Vage</p>
+        <button class="re">7 Day's Remaining</button>
+      </div>
+      <div class="col-3">
+        <p class="p">Greys Vage</p>
+        <button class="re">8 Day's Remaining</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid fi">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="heading">How Does It Work</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row ">
+      <div class="col-3">
+        <div><img src="./assets/images/Group.png" alt="img" width="55px" height="71px" style="margin-left: 100px; ">
+        </div>
+        <a href="#">
+          <p class="p1">Selection Location</p>
+        </a>
+        <p style="text-align: center;" class="para">Choose the location where your <br> food will be delivered.</p>
+      </div>
+      <div class="col-3">
+        <div class="work-img"><img src="./assets/images/Icons.png" alt="img" width="85px" height="108px"
+            style="margin-left: 100px;  "></div>
+        <a href="#">
+          <p class="p2">Choose Advance </p>
+        </a>
+        <p style="text-align: center;" class="para">Check over hundreds menus to <br> pick your favorite food</p>
+      </div>
+      <div class="col-3">
+        <div class="work-img"><img src="./assets/images/Invoice.png" alt="img" width="85px" height="108px"
+            style="margin-left: 100px;  "></div>
+        <a href="#">
+          <p class="p3">Pay Advanced</p>
+        </a>
+        <p style="text-align: center;" class="para">It's quick safe, simple.Select <br> several methods of payment</p>
+      </div>
+      <div class="col-3">
+        <div class="work-img"><img src="./assets/images/Grhjoup.png" alt="img" width="65px" height="69px"
+            style="margin-left: 110px;"></div>
+        <a href="#">
+          <p class="p4">Enjoy Meal</p>
+        </a>
+        <p style="text-align: center;" class="para">Food made and delivered direct<br>your home.</p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p
+            style="text-align: center; font-size: 43px; font-weight: 700; margin-top: 90px; color: #212121; margin-bottom: 60px;">
+            Popular Items </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-1">
+          <a href="#"><img src="./assets/images/Arrow Left.png" alt="" class="i2"></a>
+        </div>
+
+        <div class="col-2"><a href="#"><img src="./assets/images/Rectangle 336.png" alt="" height="250px"
+              class="i1"></a>
+          <p class="receipt"><a href="#" style="text-decoration: none; color: #424242;">Cheesy Burger</a></p>
+          <img src="./assets/images/iiii.png" alt="" width="10px" style="margin-bottom: 7px;"> <a href="#"
+            style="text-decoration: none; color: #FFB30E; "> Burger Arena </a>
+          <p style="color:#000">$0.99</p>
+          <button type="button" class="btn btn-warning"
+            style="color: #FFFF; background-color: #F17228; border: none; width: 195px; font-size: 20px;">Order Now
+          </button>
+        </div>
+        <div class="col-2"><a href="#"><img src="./assets/images/Rectangle 336 (1).png" alt="" height="250px"
+              class="i1"></a>
+          <p class="receipt"><a href="#" style="text-decoration: none; color: #424242;">Toffy cake</a></p>
+          <img src="./assets/images/iiii.png" alt="" width="10px" style="margin-bottom: 7px;"> <a href="#"
+            style="text-decoration: none; color: #FFB30E; "> Top Stick </a>
+          <p style="color:#000">$2.01</p>
+          <button type="button" class="btn btn-warning"
+            style="color: #FFFF; background-color: #F17228; border: none; width: 195px; font-size: 20px;">Order Now
+          </button>
+        </div>
+        <div class="col-2"><a href="#"><img src="./assets/images/Rectangle 336 (2).png" alt="" height="250px"
+              class="i1"></a>
+          <p class="receipt"><a href="#" style="text-decoration: none; color: #424242;">DanCake</a></p>
+          <img src="./assets/images/iiii.png" alt="" width="10px" style="margin-bottom: 7px;"> <a href="#"
+            style="text-decoration: none; color: #FFB30E; "> Cake World </a>
+          <p style="color:#000">$3.28</p>
+          <button type="button" class="btn btn-warning"
+            style="color: #FFFF; background-color: #F17228; border: none; width: 195px; font-size: 20px;">Order Now
+          </button>
+        </div>
+        <div class="col-2"><a href="#"><img src="./assets/images/Rectangle 336 (3).png" alt="" height="250px"
+              class="i1"></a>
+          <p class="receipt"><a href="#" style="text-decoration: none; color: #424242;">Crispy Sandwitch</a></p>
+          <img src="./assets/images/iiii.png" alt="" width="10px" style="margin-bottom: 7px;"> <a href="#"
+            style="text-decoration: none; color: #FFB30E; "> FastFood Dine</a>
+          <p style="color:#000">$1.88</p>
+          <button type="button" class="btn btn-warning"
+            style="color: #FFFF; background-color: #F17228; border: none; width: 195px; font-size: 20px;">Order Now
+          </button>
+        </div>
+        <div class="col-2"><a href="#"><img src="./assets/images/Rectangle 336 (4).png" alt="" height="250px"
+              class="i1"></a>
+          <p class="receipt"><a href="#" style="text-decoration: none; color: #424242;">Thai Soup</a></p>
+          <img src="./assets/images/iiii.png" alt="" width="10px" style="margin-bottom: 7px;"> <a href="#"
+            style="text-decoration: none; color: #FFB30E; "> Foody Man </a>
+          <p style="color:#000">$3.88</p>
+          <button type="button" class="btn btn-warning"
+            style="color: #FFFF; background-color: #F17228; border: none; width: 195px; font-size: 20px;">Order Now
+          </button>
+        </div>
+        <div class="col-1"><a href="#"><img src="./assets/images/Arrow Right.png" alt="" class="i2  "></a> </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p
+              style="color: #000; margin-top: 70px;margin-bottom: 60px; text-align: center; font-size: 43px; font-weight: 700;">
+              Featured Restaurents</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="parent-btn"><img src="./assets/images/vxvxvImage.png" alt="img" style="position: absolute; border-radius: 15px;">
+              <div class="child"><button type="button" class="btn btn-warning"
+                style="position: relative; margin-left: 15px; margin-top: 15px; background-color: #F17228;border: none; font-size: 22px; font-weight: 700; color: #FFFF;"><img
+                src="./assets/images/fhgIcon.png" alt="" style="margin-bottom: 2px;"> 20% Off</button><button
+                type="button" class="btn btn-warning"
+                style="position: relative; margin-left: 15px; margin-top: 15px; background-color: #FFB30E;border: none; font-size: 22px; font-weight: 700; color: #FFFF;"><img
+                src="./assets/images/kldj.png" alt="" style="margin-bottom: 4px;"> Fast</button></div>
+                
+                </div>
+
+          </div>
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+      <link rel="stylesheet" href="./js/bootstrap.min.js">
+</body>
+
+</html>
